@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Filter App</h1>
+        <input type="file" id="upload" accept="image/*">
+        <div class="image-container">
+            <img id="uploaded-image" src="" alt="Uploaded Image">
+        </div>
+        <div class="filters">
+            <button class="filter-button" data-filter="grayscale(100%)">Grayscale</button>
+            <button class="filter-button" data-filter="sepia(100%)">Sepia</button>
+            <button class="filter-button" data-filter="blur(5px)">Blur</button>
+            <button class="filter-button" data-filter="contrast(200%)">Contrast</button>
+            <button class="filter-button" data-filter="brightness(150%)">Brightness</button>
+            <button class="filter-button" data-filter="saturate(200%)">Saturate</button>
+            <button class="filter-button" data-filter="hue-rotate(90deg)">Hue Rotate</button>
+            <button class="filter-button" data-filter="drop-shadow(10px 10px 10px rgba(0,0,0,0.5))">Drop Shadow</button>
+            <button class="filter-button" data-filter="opacity(50%)">Opacity</button>
+            <button class="filter-button" data-filter="hue-rotate(180deg)">Hue Rotate 180°</button>
+        </div>
+        <button id="remove-filters">Remove Filters</button>
+        <button id="download">Download Image</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
