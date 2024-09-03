@@ -1,0 +1,150 @@
+/* Main body with gradient background */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+    background: linear-gradient(135deg, #4a00e0, #8e2de2, #f953c6);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* Gradient animation to add shine effect */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Title style */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* File upload button style */
+input[type="file"] {
+    margin-bottom: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+/* Image container to center the uploaded image */
+.image-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Display uploaded image with 67% fixed size */
+#uploaded-image {
+    max-width: 67%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    pointer-events: none; /* Prevent interaction with the image */
+}
+
+/* Filter buttons layout */
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Filter button styles */
+.filter-button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff6f61, #ffb74d);
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s, opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+}
+
+/* Dull effect for applied filters */
+.filter-button.dull {
+    background: linear-gradient(to right, #ff8a65, #ffcc80);
+    opacity: 0.6;
+}
+
+/* Filter button hover effects */
+.filter-button:hover {
+    background: linear-gradient(to right, #ff8a65, #ffcc80);
+    transform: scale(1.05);
+}
+
+/* Remove filters button style */
+#remove-filters {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#remove-filters:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Download button style */
+#download {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#download:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
